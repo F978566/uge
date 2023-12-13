@@ -12,4 +12,16 @@ for x in range(1, 1001):
     if test(x) == 3:
         count += 1
 
-print(count)
+# print(count)
+
+import sys
+
+sys.setrecursionlimit(10**6)
+
+def f16(n):
+    if n == 1:
+        return 1
+    
+    return n - 1 + f16(n - 1)
+
+# print(f16(2024) - f16(2022))
